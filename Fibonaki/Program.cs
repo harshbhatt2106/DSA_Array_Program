@@ -8,9 +8,7 @@ namespace Fibonaki
             Console.WriteLine("Enter Number ");
             int number = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Hello");
             int[] fibo = new int[number];
-
             {
                 fibo[0] = 0;
                 fibo[1] = 1;
