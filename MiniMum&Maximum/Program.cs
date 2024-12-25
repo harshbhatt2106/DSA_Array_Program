@@ -6,26 +6,10 @@ using System.Threading.Tasks;
 
 namespace MiniMum_Maximum
 {
-    //public struct MyStruct
-    //{
-    //    public int min;
-    //    public int max;
-    //}
 
     internal class Program
     {
-        //static MyStruct GetMy(int[] array, int size)
-        //{
-
-        //    MyStruct myStruct = new MyStruct();
-
-        //    Array.Sort(array);
-        //    myStruct.max = array[size - 1];
-        //    myStruct.min = array[0];
-
-        //    return myStruct;
-
-        //}
+       
         static void Main(string[] args)
         {
 
@@ -45,10 +29,6 @@ namespace MiniMum_Maximum
                     min = arrau[i];
                 }
             }
-
-
-
-            //MyStruct a =   GetMy(arrau, arrau.Length);
 
             Console.WriteLine("min:" + min);
             Console.WriteLine("max:" + max);

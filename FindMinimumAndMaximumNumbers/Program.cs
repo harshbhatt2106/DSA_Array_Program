@@ -35,7 +35,6 @@ namespace FindMinimumAndMaximumNumbers
             Console.WriteLine("-------------");
 
             Console.ReadLine();
-
         }
     }
 }
