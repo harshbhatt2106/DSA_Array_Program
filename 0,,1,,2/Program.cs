@@ -10,49 +10,91 @@ namespace _0__1__2
     {
         static void Main(string[] args)
         {
+            int c0 = 0, c1 = 0, c2 = 0;
 
-            Console.Write("Enter the number of elements in the array: ");
-            int size = int.Parse(Console.ReadLine());
-
-            int[] Arr = new int[size];
-
-            for (int i = 0; i < size; i++)
+            Console.WriteLine("Enter Value of Array");
+            int[] arr = new int[5];
+            int[] newar = new int[5];
+            for (int j = 0; j < 5; j++)
             {
                 Console.Write("Enter Elemt of array ");
-                Arr[i] = int.Parse(Console.ReadLine());
+                arr[j] = int.Parse(Console.ReadLine());
             }
 
-
-            int[] sortedarray = new int[size];
-
-            int indexOfSortedaarray = 0;
-
-            int kthminimum = int.MinValue;
-            for (int i = 0; i < Arr.Length; i++)
+            for (int o = 0; o < arr.Length; o++)
             {
-                int minium = int.MaxValue;
-                foreach (int j in Arr)
+                if (arr[o] == 0)
                 {
-                    if (j < minium && j > kthminimum)
-                    {
-                        minium = j;
-                    }
-                    if (j == kthminimum)
-                    {
-                        sortedarray[indexOfSortedaarray] = j;
-                        indexOfSortedaarray++;
-                    }
+                    c0 += 1;
                 }
-                kthminimum = minium;
+                else if (arr[o] == 1)
+                {
+                    c1 += 1;
+                }
+                else
+                {
+                    c2 += 1;
+                }
             }
 
-            Console.WriteLine("** Sorted Array **");
+            int idx = 0;
 
-            foreach (var item in sortedarray)
+            for (int i = 0; i < c0; i++)
+                arr[idx++] = 0;
+
+            for (int i = 0; i < c1; i++)
+                arr[idx++] = 1;
+
+            for (int i = 0; i < c2; i++)
+                arr[idx++] = 2;
+
+            for (int j = 0; j < arr.Length; j++)
             {
-                Console.Write("  " + item);
+                Console.WriteLine(arr[j]);
             }
-            Console.ReadLine();
         }
     }
 }
+// its my code 
+//Console.Write("Enter the number of elements in the array: ");
+//int size = int.Parse(Console.ReadLine());
+
+//int[] Arr = new int[size];
+
+//for (int i = 0; i < size; i++)
+//{
+//    Console.Write("Enter Elemt of array ");
+//    Arr[i] = int.Parse(Console.ReadLine());
+//}
+
+
+//int[] sortedarray = new int[size];
+
+//int indexOfSortedaarray = 0;
+
+//int kthminimum = int.MinValue;
+//for (int i = 0; i < Arr.Length; i++)
+//{
+//    int minium = int.MaxValue;
+//    foreach (int j in Arr)
+//    {
+//        if (j < minium && j > kthminimum)
+//        {
+//            minium = j;
+//        }
+//        if (j == kthminimum)
+//        {
+//            sortedarray[indexOfSortedaarray] = j;
+//            indexOfSortedaarray++;
+//        }
+//    }
+//    kthminimum = minium;
+//}
+
+//Console.WriteLine("** Sorted Array **");
+
+//foreach (var item in sortedarray)
+//{
+//    Console.Write("  " + item);
+//}
+//Console.ReadLine();
